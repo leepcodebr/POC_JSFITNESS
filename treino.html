@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Ficha de Treino JS Fitness">
+    <title>Treino - JS Fitness</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Overlay de Segurança Fixo (Blackout Total) -->
+    <div id="security-overlay">
+        <h2 style="color: white; font-family: 'Inter', sans-serif;">Conteúdo Protegido</h2>
+        <p style="color: #ccc; font-family: 'Inter', sans-serif;">Mantenha o cursor dentro da página e a janela ativa para visualizar.</p>
+    </div>
+
+    <!-- 2. Mensagem mostrada apenas na tentativa de impressão (Ctrl+P) -->
+    <div id="print-warning">
+        <h2 style="color: #333; font-family: 'Inter', sans-serif;">Acesso Restrito</h2>
+        <p style="color: #666; font-family: 'Inter', sans-serif;">A impressão deste documento está bloqueada por confidencialidade.</p>
+    </div>
+
+    <!-- 3. Wrapper de Segurança (Mobile Frame) -->
+    <div id="secure-wrapper">
+        
+        <!-- Header Mobile -->
+        <header class="app-header d-flex justify-content-between align-items-center">
+            <div>
+                <p class="text-secondary mb-0 small">Olá,</p>
+                <h1 class="h5 text-white mb-0 fw-bold">João Aluno</h1>
+            </div>
+            <div class="user-avatar">
+                JA
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="mb-4">
+                <h2 class="h6 text-white mb-3">Suas Fichas de Treino</h2>
+                
+                <!-- Dropdown Selection -->
+                <select class="form-select custom-select mb-3" id="treinoSelect">
+                    <option value="treinoa">A: Peito e Tríceps</option>
+                    <option value="treinob">B: Costas e Bíceps</option>
+                    <option value="treinoc">C: Pernas e Ombro</option>
+                </select>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content" id="treinos-tabContent">
+                
+                <!-- Treino A -->
+                <div class="tab-pane fade show active" id="treinoa" role="tabpanel" aria-labelledby="treinoa-tab">
+                    <div id="exerciseListA">
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-barbell"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Supino Reto com Barra</h3>
+                                <p>4 séries de 10 a 12 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-barbell"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Supino Inclinado c/ Halteres</h3>
+                                <p>3 séries de 12 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person-arms-spread"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Crucifixo Máquina</h3>
+                                <p>3 séries de 15 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+                        
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Tríceps Pulley</h3>
+                                <p>4 séries de 10 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treino B -->
+                <div class="tab-pane fade" id="treinob" role="tabpanel" aria-labelledby="treinob-tab">
+                    <div id="exerciseListB">
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-barbell"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Puxada Frontal</h3>
+                                <p>4 séries de 10 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-barbell"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Remada Curvada</h3>
+                                <p>4 séries de 12 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Rosca Direta</h3>
+                                <p>3 séries de 15 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treino C -->
+                <div class="tab-pane fade" id="treinoc" role="tabpanel" aria-labelledby="treinoc-tab">
+                    <div id="exerciseListC">
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Agachamento Livre</h3>
+                                <p>4 séries de 8 a 10 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Leg Press 45º</h3>
+                                <p>4 séries de 12 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+
+                        <a href="exercicio_detalhe.html" class="exercise-card">
+                            <div class="exercise-thumb">
+                                <i class="ph ph-person"></i>
+                            </div>
+                            <div class="exercise-info flex-grow-1">
+                                <h3 class="text-white">Desenvolvimento Ombros</h3>
+                                <p>3 séries de 12 repetições</p>
+                            </div>
+                            <i class="ph ph-caret-right text-secondary fs-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div> <!-- Fim Tab Content -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="treino.html" class="nav-item active">
+                <i class="ph-fill ph-barbell"></i>
+                Treino
+            </a>
+            <a href="avaliacao.html" class="nav-item">
+                <i class="ph ph-clipboard-text"></i>
+                Avaliação
+            </a>
+            <a href="perfil.html" class="nav-item">
+                <i class="ph ph-user"></i>
+                Perfil
+            </a>
+        </nav>
+
+    </div> <!-- Fim Secure Wrapper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

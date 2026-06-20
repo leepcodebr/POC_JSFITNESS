@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Perfil do Aluno JS Fitness">
+    <title>Perfil - JS Fitness</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Overlay de Segurança Fixo (Blackout Total) -->
+    <div id="security-overlay">
+        <h2 style="color: white; font-family: 'Inter', sans-serif;">Conteúdo Protegido</h2>
+        <p style="color: #ccc; font-family: 'Inter', sans-serif;">Mantenha o cursor dentro da página e a janela ativa para visualizar.</p>
+    </div>
+
+    <!-- 2. Mensagem mostrada apenas na tentativa de impressão (Ctrl+P) -->
+    <div id="print-warning">
+        <h2 style="color: #333; font-family: 'Inter', sans-serif;">Acesso Restrito</h2>
+        <p style="color: #666; font-family: 'Inter', sans-serif;">A impressão deste documento está bloqueada por confidencialidade.</p>
+    </div>
+
+    <!-- 3. Wrapper de Segurança (Mobile Frame) -->
+    <div id="secure-wrapper">
+        
+        <!-- Header Mobile -->
+        <header class="app-header text-center">
+            <h1 class="h5 text-white mb-0 fw-bold">Meu Perfil</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <div class="text-center mb-4">
+                <div class="user-avatar mx-auto mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                    JA
+                </div>
+                <h2 class="h5 text-white mb-1">João Aluno</h2>
+                <p class="text-secondary small">joao.aluno@email.com</p>
+            </div>
+
+            <!-- Opções da Conta -->
+            <h3 class="h6 text-white mb-3 mt-4">Conta</h3>
+            <div class="eval-card p-0 overflow-hidden mb-4">
+                <div class="list-group list-group-flush bg-transparent">
+                    <a href="#" class="list-group-item bg-transparent text-white d-flex align-items-center border-0 py-3">
+                        <i class="ph ph-pencil-simple fs-4 me-3 text-accent-gold"></i>
+                        <span class="flex-grow-1">Editar Nome</span>
+                        <i class="ph ph-caret-right text-secondary"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Informações Úteis -->
+            <h3 class="h6 text-white mb-3 mt-4">Informações Úteis</h3>
+            <div class="eval-card p-0 overflow-hidden mb-5">
+                <div class="list-group list-group-flush bg-transparent">
+                    <a href="https://wa.me/5511999999999" target="_blank" class="list-group-item bg-transparent text-white d-flex align-items-center border-secondary py-3">
+                        <i class="ph ph-whatsapp-logo fs-4 me-3 text-success"></i>
+                        <span class="flex-grow-1">WhatsApp</span>
+                        <i class="ph ph-caret-right text-secondary"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" class="list-group-item bg-transparent text-white d-flex align-items-center border-secondary py-3">
+                        <i class="ph ph-instagram-logo fs-4 me-3" style="color: #E1306C;"></i>
+                        <span class="flex-grow-1">Instagram</span>
+                        <i class="ph ph-caret-right text-secondary"></i>
+                    </a>
+                    <a href="mailto:academiajsfit@jsfit.com.br" class="list-group-item bg-transparent text-white d-flex align-items-center border-secondary py-3">
+                        <i class="ph ph-envelope-simple fs-4 me-3 text-secondary"></i>
+                        <span class="flex-grow-1">E-mail de Suporte</span>
+                        <i class="ph ph-caret-right text-secondary"></i>
+                    </a>
+                    <a href="tel:+5511999999999" class="list-group-item bg-transparent text-white d-flex align-items-center justify-content-between border-0 py-3 text-decoration-none">
+                        <div class="d-flex align-items-center">
+                            <i class="ph ph-phone fs-4 me-3 text-secondary"></i>
+                            <span>Telefone:</span>
+                        </div>
+                        <span class="text-accent-gold">(11) 99999-9999</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botão Sair -->
+            <div class="mt-auto">
+                <a href="index.html" class="btn btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2 py-3 border-0 bg-danger bg-opacity-10 rounded-pill">
+                    <i class="ph ph-sign-out fs-5"></i> Sair do Aplicativo
+                </a>
+            </div>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="treino.html" class="nav-item">
+                <i class="ph ph-barbell"></i>
+                Treino
+            </a>
+            <a href="avaliacao.html" class="nav-item">
+                <i class="ph ph-clipboard-text"></i>
+                Avaliação
+            </a>
+            <a href="perfil.html" class="nav-item active">
+                <i class="ph-fill ph-user"></i>
+                Perfil
+            </a>
+        </nav>
+
+    </div> <!-- Fim Secure Wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>

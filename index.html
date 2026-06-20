@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesso restrito ao sistema JS Fitness Academia">
+    <title>Login - JS Fitness Academia</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Overlay de Segurança Fixo (Blackout Total) -->
+    <div id="security-overlay">
+        <h2 style="color: white; font-family: 'Inter', sans-serif;">Conteúdo Protegido</h2>
+        <p style="color: #ccc; font-family: 'Inter', sans-serif;">Mantenha o cursor dentro da página e a janela ativa para visualizar.</p>
+    </div>
+
+    <!-- 2. Mensagem mostrada apenas na tentativa de impressão (Ctrl+P) -->
+    <div id="print-warning">
+        <h2 style="color: #333; font-family: 'Inter', sans-serif;">Acesso Restrito</h2>
+        <p style="color: #666; font-family: 'Inter', sans-serif;">A impressão deste documento está bloqueada por confidencialidade.</p>
+    </div>
+
+    <!-- 3. Wrapper de Segurança -->
+    <div id="secure-wrapper">
+        
+        <main class="login-container">
+            <section class="login-card">
+                <header class="text-center mb-4">
+                    <img src="logo.png" alt="JS Fitness Logo" class="login-logo">
+                    <h1 class="h4 text-white">Bem-vindo(a)</h1>
+                    <p class="text-secondary">Acesse sua ficha de treino</p>
+                </header>
+
+                <form id="loginForm" novalidate>
+                    <div class="form-group mb-3">
+                        <label for="username" class="form-label">Usuário</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-dark border-secondary text-secondary">
+                                <i class="ph ph-user"></i>
+                            </span>
+                            <input type="text" class="form-control" id="username" placeholder="Digite seu usuário (opcional)">
+                            <div class="invalid-feedback">Por favor, preencha o usuário.</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="password" class="form-label">Senha</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-dark border-secondary text-secondary">
+                                <i class="ph ph-lock-key"></i>
+                            </span>
+                            <input type="password" class="form-control" id="password" placeholder="Digite sua senha (opcional)">
+                            <div class="invalid-feedback">Por favor, preencha a senha.</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" id="loginBtn">
+                        <span id="btnText">Entrar</span>
+                        <i id="btnIcon" class="ph ph-sign-in ms-2"></i>
+                    </button>
+                </form>
+            </section>
+        </main>
+
+    </div> <!-- Fim Secure Wrapper -->
+
+    <!-- Custom Script (Security + Logic) -->
+    <script src="script.js"></script>
+</body>
+</html>
